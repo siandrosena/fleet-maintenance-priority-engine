@@ -55,6 +55,14 @@ pytest tests/
 - Reduz o "qual dos 20 veículos eu olho primeiro" de intuição pra score explicável
 - Base validada de um sistema em produção numa operação real de transporte de passageiros
 
+## ⚠️ Limitações conhecidas
+
+- **`wheel_diagnosis` confia na leitura de sulco como verdadeira** — não valida se os 4 números fazem sentido físico (ex.: valor negativo, fora da faixa de um pneu novo/gasto). Garbage in, garbage out.
+- **Os limiares (3mm pra alinhamento, 2mm pra calibragem) são constantes fixas**, não calibradas por modelo/marca de pneu ou por eixo (dianteiro e traseiro desgastam diferente) — funcionam como regra geral, não como valor validado estatisticamente.
+- **Só cobre 2 eixos de desgaste** (borda-a-borda e centro-vs-bordas) combinados em 5 vereditos. Padrão de desgaste que não se encaixa nesses dois (ex.: desgaste diagonal por problema de rolamento/suspensão) cai em `DESGASTE_IRREGULAR` sem indicar a causa real.
+- **`priority_score` não considera custo, disponibilidade de peça/oficina ou criticidade da rota** — é um score de severidade de inspeção, não uma otimização operacional completa.
+- **Categoria com nome digitado errado é ignorada em silêncio** (`score_vehicle` só soma o que reconhece) — um typo na severidade de entrada derruba a pontuação daquele veículo sem aviso nenhum.
+
 ## 🌍 Contexto real e sobre a anonimização
 
 Extraído e generalizado (sem nome de empresa, placa ou qualquer dado identificável) de um sistema de manutenção preventiva que estruturei para uma empresa de transporte rodofluvial de passageiros com garagem em Barcarena-PA. A versão em produção roda como fórmula/Apps Script dentro de uma planilha real do cliente e não é publicada aqui — o que este repositório mostra é a **lógica de decisão**, reescrita do zero em Python puro e testada isoladamente.
