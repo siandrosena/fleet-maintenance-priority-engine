@@ -1,0 +1,9 @@
+{
+  "VEICULO-01": { "calibragem": 0.9, "sulco": 0.4, "alinhamento": 0.1 },
+  "VEICULO-02": { "calibragem": 0.1, "sulco": 0.2, "alinhamento": 0.1, "oleo_filtros": 0.1, "lubrificacao": 0.1 },
+  "VEICULO-03": { "sulco": 1.0, "alinhamento": 0.8 },
+  "VEICULO-04": { "lubrificacao": 1.0 },
+  "VEICULO-05": { "calibragem": 0.6, "alinhamento": 0.6, "oleo_filtros": 0.6 },
+  "VEICULO-06": { "sulco": 0.3 },
+  "VEICULO-07": { "calibragem": 1.0, "sulco": 1.0, "alinhamento": 1.0, "oleo_filtros": 1.0, "lubrificacao": 1.0 }
+}
