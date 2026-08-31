@@ -1,5 +1,7 @@
 # 🚦 Qual veículo da frota precisa de manutenção HOJE?
 
+> 💼 **Se sua frota ainda decide "o que olhar primeiro" no feeling de um mecânico específico, isso aqui resolve:** os dados de inspeção viram um ranking automático, com o motivo ao lado de cada veículo.
+
 > Sistema que lê os dados de inspeção de cada veículo — pneu, calibragem, alinhamento, óleo, lubrificação — e devolve uma lista ordenada: **comece por aqui, é o mais urgente.**
 
 *(English summary below ⬇️)*
